@@ -15,10 +15,10 @@ if(isset($_POST['s'])){
         $a_no=$_POST['aadhar_number'];
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
-       // $password=md5($u_pass);
-       $reg="insert into user values('$u_name','$u_id','$u_pass','$u_addr','$a_no','$gen','$mob')";
+  
+       $reg="INSERT INTO user values('$u_name','$u_id','$u_pass','$u_addr','$a_no','$gen','$mob')";
         mysqli_select_db($con,"crime_portal");
-        $res=mysqli_query($reg,$con);
+        $res=mysqli_query($con,$reg);
         if(!$res)
         {
         $message1 = "User Already Exist";
